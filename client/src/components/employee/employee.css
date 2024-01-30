@@ -1,0 +1,13 @@
+.employee {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.employee .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
