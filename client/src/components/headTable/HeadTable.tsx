@@ -1,15 +1,17 @@
-import './headTable.css';
+import "./headTable.css";
 
 const HeadTable = () => {
   return (
-    <div className='headTable'>
-        <div className='name'>Name</div>
-        <div className='email'>Email</div>
-        <div className='department'>Department</div>
-        <div className='phone'>Phone</div>
-        <div className='actions'>Actions</div>
-    </div>
-  )
-}
+    <thead className="headTable">
+      <tr>
+        <th className="name">Name</th>
+        <th className="email">Email</th>
+        <th className="department">Department</th>
+        <th className="phone">Phone</th>
+        <th className="actions">Actions</th>
+      </tr>
+    </thead>
+  );
+};
 
-export default HeadTable
+export default HeadTable;

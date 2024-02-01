@@ -1,0 +1,36 @@
+.postForm {
+    margin-top: 1rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    border: 1px solid rgba(0, 157, 248, 0.589);
+    box-shadow: 5px 5px 30px rgba(42, 161, 235, 0.863);
+    background-color: white;
+    width: min(350px,100%);
+}
+
+.postForm .formField {
+    display: flex;
+    flex-direction: column;
+    width: 100%;  
+}
+
+.postForm button {
+    margin-inline: auto;
+    background: rgb(14, 124, 214);
+    color: white;
+    border: none;
+    padding: 0.3rem 0.6rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.postForm input {
+    background: rgba(0, 157, 248, 0.384);
+    border: none;
+    height: 30px;
+}

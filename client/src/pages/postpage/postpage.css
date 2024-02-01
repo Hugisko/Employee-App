@@ -1,0 +1,10 @@
+.postPage .content {
+    margin: 4rem 1rem;
+    display: grid;
+    place-items: center;
+}
+
+.postPage h2 {
+    color: rgb(14, 124, 214);
+    font-size: 1.8rem;
+}

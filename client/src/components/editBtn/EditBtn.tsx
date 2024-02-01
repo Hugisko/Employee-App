@@ -1,8 +1,16 @@
+import { ButtonHTMLAttributes } from 'react';
 import './editBtn.css'
+import { IDType } from '../../types/types';
 
-const EditBtn = () => {
+type EditProps = {
+  id: string,
+  handleEdit: (id: string) => void
+}
+
+const EditBtn = ({handleEdit, id} : EditProps) => {
+
   return (
-    <div className='editBtn'>EditBtn</div>
+    <button type='button' className='editBtn' onClick={()=>handleEdit(id)}>EditBtn</button>
   )
 }
 

@@ -4,10 +4,10 @@ import Employees from '../employees/Employees';
 
 const Table = () => {
   return (
-    <div className='table'>
+    <table className='table'>
         <HeadTable />
         <Employees />
-    </div>
+    </table>
   )
 }
 

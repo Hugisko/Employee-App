@@ -1,11 +1,22 @@
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./App.css";
-import Table from "./components/table/Table";
+import Homepage from "./pages/homepage/Homepage";
+import Postpage from "./pages/postpage/Postpage";
 
 const App = () => {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Homepage />,
+    },
+    {
+      path: "/post",
+      element: <Postpage />
+    },
+  ]);
   return (
     <div className="app">
-      <h1>Employees</h1>
-      <Table />
+      <RouterProvider router={router} />
     </div>
   );
 }

@@ -1,8 +1,14 @@
-import './deleteBtn.css'
+import { IDType } from '../../types/types';
+import './deleteBtn.css';
 
-const DeleteBtn = () => {
+type DeleteProps = {
+  id: string,
+  handleDelete: (id: string) => void
+}
+
+const DeleteBtn = ({id, handleDelete} : DeleteProps) => {
   return (
-    <div className='deleteBtn'>DeleteBtn</div>
+    <button type='button' className='deleteBtn' onClick={()=>handleDelete(id)}>DeleteBtn</button>
   )
 }
 

@@ -1,17 +1,21 @@
+import { useState } from "react";
 import { employeesData } from "../../data";
 import Employee from "../employee/Employee";
 import './employees.css'
 
 const Employees = () => {
+  const [editId, setEditId] = useState<string>("");
   return (
-    <div className="employees">
+    <tbody className="employees">
       {employeesData.map((employee) => (
         <Employee
           key={employee.id}
           data={employee}
+          editId={editId}
+          setEditId={setEditId}
         />
       ))}
-    </div>
+    </tbody>
   );
 };
 
