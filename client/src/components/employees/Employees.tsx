@@ -1,18 +1,29 @@
-import { useState } from "react";
-import { employeesData } from "../../data";
+import { useEffect, useState } from "react";
 import Employee from "../employee/Employee";
-import './employees.css'
+import useFetching from "../../hooks/useFetching";
 
 const Employees = () => {
-  const [editId, setEditId] = useState<string>("");
+  const [activeId, setActiveId] = useState<string>("");
+  const {data, fetchData, deleteData} = useFetching();
+
+  useEffect(() => {
+    fetchData();
+  },[fetchData])
+
+  const handleDelete = async (id: string) => {
+    await deleteData(id);
+    fetchData();
+  };
+
   return (
     <tbody className="employees">
-      {employeesData.map((employee) => (
+      {data && data.map((employee) => (
         <Employee
           key={employee.id}
-          data={employee}
-          editId={editId}
-          setEditId={setEditId}
+          employeeData={employee}
+          activeId={activeId}
+          setActiveId={setActiveId}
+          handleDelete={handleDelete}
         />
       ))}
     </tbody>

@@ -14,3 +14,28 @@
     justify-content: center;
     gap: 1rem;
 }
+
+.employee .btn {
+    border-radius: 20px;
+    padding: 0.4rem;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+.employee .btn-rect {
+    border-radius: 10px;
+    padding: 0.4rem;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+.employee .redBtn {
+    background: rgb(255, 50, 50);
+
+}
+
+.employee .yellowBtn {
+    background: rgb(207, 192, 102);
+}

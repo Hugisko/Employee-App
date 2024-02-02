@@ -1,16 +1,18 @@
 import { ChangeEvent, FormEvent, useState } from "react";
 import "./postForm.css";
 import { EmployeeInput } from "../../types/types";
+import useFetching from "../../hooks/useFetching";
 
-const defaultValues = {
-    name: "",
-    email: "",
-    phone: "",
-    department: "",
-}
+const defaultValues: EmployeeInput = {
+  name: "",
+  email: "",
+  phone: "",
+  department: "",
+};
 
 const PostForm = () => {
   const [formValues, setFormValues] = useState<EmployeeInput>(defaultValues);
+  const {postData} = useFetching();
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setFormValues({
@@ -22,6 +24,7 @@ const PostForm = () => {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setFormValues(defaultValues);
+    postData(formValues);
   };
 
   return (
